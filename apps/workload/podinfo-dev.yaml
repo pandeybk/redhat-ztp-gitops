@@ -1,0 +1,42 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: podinfo-dev
+  namespace: openshift-gitops
+spec:
+  generators:
+    - clusterDecisionResource:
+        configMapRef: acm-placement
+        labelSelector:
+          matchLabels:
+            cluster.open-cluster-management.io/placement: podinfo-placement
+        requeueAfterSeconds: 180
+  template:
+    metadata:
+      name: 'podinfo-{{name}}'
+    spec:
+      project: "default"
+      source:
+        repoURL: https://github.com/pandeybk/redhat-ztp-gitops.git
+        targetRevision: master
+        path: workload/podinfo
+      destination:
+        server: '{{server}}'
+        namespace: podinfo-dev
+      syncPolicy:
+        automated:
+          selfHeal: true
+        syncOptions:
+            - CreateNamespace=true
+---
+apiVersion: cluster.open-cluster-management.io/v1alpha1
+kind: Placement
+metadata:
+  name: podinfo-placement
+  namespace: openshift-gitops
+spec:
+  predicates:
+  - requiredClusterSelector:
+      labelSelector:
+        matchLabels:
+          app: webapp
