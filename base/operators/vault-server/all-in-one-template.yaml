@@ -321,6 +321,29 @@ spec:
     app.kubernetes.io/instance: vault-server
     component: server
 ---
+# Source: vault/templates/ui-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: vault-server-ui
+  namespace: vault
+  labels:
+    helm.sh/chart: vault-0.19.0
+    app.kubernetes.io/name: vault-ui
+    app.kubernetes.io/instance: vault-server
+    app.kubernetes.io/managed-by: Helm
+spec:
+  selector:
+    app.kubernetes.io/name: vault
+    app.kubernetes.io/instance: vault-server
+    component: server
+  publishNotReadyAddresses: true
+  ports:
+    - name: http
+      port: 8200
+      targetPort: 8200
+  type: ClusterIP
+---
 # Source: vault/templates/injector-deployment.yaml
 # Deployment for the injector
 apiVersion: apps/v1

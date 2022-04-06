@@ -1,6 +1,9 @@
 global:
   openshift: true
 
+ui:
+  enabled: true
+
 injector:
   image:
     repository: "registry.connect.redhat.com/hashicorp/vault-k8s"
