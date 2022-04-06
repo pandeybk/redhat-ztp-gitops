@@ -1,2 +1,3 @@
 resources:
 - 01-external-secret-operator-config.yaml
+- 02-argocd-integration-config.yaml
