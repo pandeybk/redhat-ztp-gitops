@@ -1,0 +1,5 @@
+resources:
+  - 01-placement.yaml
+  - 02-managedclusterset.yaml
+  - 03-managedclustersetbinding.yaml
+  - 04-gitopscluster.yaml

@@ -1,0 +1,2 @@
+resources:
+- 01-external-secret-operator-config.yaml
