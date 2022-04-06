@@ -8,7 +8,6 @@ resources:
   # - 01-unsealed-pull-secret.yaml
   - 01-unsealed-bmc-secret.yaml
   - 03-agentclusterinstall.yaml
-  - 03-cilium-configmap.yaml
   - 04-clusterdeployment.yaml
   - 05-klusterlet.yaml
   - 06-managedcluster.yaml
