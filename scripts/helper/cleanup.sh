@@ -1,0 +1,1 @@
+oc patch argocd openshift-gitops -n openshift-gitops -p '{"metadata":{"finalizers":null}}' --type=merge
