@@ -4,7 +4,8 @@ kind: Kustomization
 
 resources:
   - 00-namespace.yaml
-  - 01-unsealed-pull-secret.yaml
+  - 01-external-pull-secret.yaml
+  # - 01-unsealed-pull-secret.yaml
   - 01-unsealed-bmc-secret.yaml
   - 03-agentclusterinstall.yaml
   - 03-calico-configmap.yaml
