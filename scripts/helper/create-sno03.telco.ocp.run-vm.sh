@@ -1,8 +1,8 @@
-export HUB_CLUSTER_NAME="ztp-hub"
-export CLUSTER_NAME="sno02"
+export HUB_CLUSTER_NAME="hubztp"
+export CLUSTER_NAME="sno03"
 export NAME_BRIDGE="br0"
-export UUID="deed1e55-fe11-f0e5-0dd5-babb1ed1a011"
-export MAC="00:00:00:00:00:11"
+export UUID="deed1e55-fe11-f0e5-0dd5-babb1ed1a012"
+export MAC="00:00:00:00:00:12"
 
 sudo qemu-img create -f qcow2 /opt/ssd/${HUB_CLUSTER_NAME}/${CLUSTER_NAME}.qcow2 200G
 

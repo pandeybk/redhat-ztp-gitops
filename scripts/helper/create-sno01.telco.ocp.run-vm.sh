@@ -1,4 +1,4 @@
-export HUB_CLUSTER_NAME="ztp-hub"
+export HUB_CLUSTER_NAME="hubztp"
 export CLUSTER_NAME="sno01"
 export NAME_BRIDGE="br0"
 export UUID="deed1e55-fe11-f0e5-0dd5-babb1ed1a010"
