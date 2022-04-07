@@ -9,7 +9,7 @@ bases:
 
 replicas:
 - name: productpage
-  count: 1
+  count: 2
 - name: details
   count: 1
 - name: ratings
