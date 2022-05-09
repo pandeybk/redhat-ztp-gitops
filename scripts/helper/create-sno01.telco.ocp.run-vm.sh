@@ -9,8 +9,8 @@ sudo qemu-img create -f qcow2 /opt/ssd/${HUB_CLUSTER_NAME}/${CLUSTER_NAME}.qcow2
 sudo virt-install \
   --name=${HUB_CLUSTER_NAME}-${CLUSTER_NAME} \
   --uuid=${UUID} \
-  --ram=33384 \
-  --vcpus=8 \
+  --ram=65536 \
+  --vcpus=16 \
   --cpu host-passthrough \
   --os-type linux \
   --os-variant rhel8.0 \
