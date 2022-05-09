@@ -13,10 +13,10 @@ oc exec -ti vault-server-0 -- vault kv put secret/openshiftpullsecret dockerconf
 
 oc create secret generic vault-token --from-literal=token="s.STiv0eifCCcX3OoApPvqHJmF"
 
-# Unseal Key 1: +oDOtObq/w3DbzaOZdbD1bOJqE+Dr5ke4ulERAFW5xj2
-# Unseal Key 2: IFm1dcwmgOkX1iSbzwgwvOqxEfVkeNLuUDywXsYW+F3J
-# Unseal Key 3: 3ASAixl7YK2n6bBgKM3WLxbSRjd4OtBhMkOoCUmvUHVz
-# Unseal Key 4: brhNnAMJMfpMxeRsTIOQ6MKrvqsGE2FKG8tFnyknH8S4
-# Unseal Key 5: kSn9fENze9hOCsYiKDdXPLINEVo0+IjgZwfwKktWjofl
+# Unseal Key 1: vDOUH+64ClDDMoUETLOwM0t25jlsSlF4Gp9Uo50VazIY
+# Unseal Key 2: BTVywAKZB3+cBFaCiaD6ETGo8OqCD3mYo7nDBDEtgocW
+# Unseal Key 3: q5AyTKv7+Lm4SSAz2vguZxD+bSy+YD85CPcLwFASGJoc
+# Unseal Key 4: 4yXKKTYPiigjnf5QAoEnutkqOlEDeTfc7E3rtX/8EZ8f
+# Unseal Key 5: dd2q6sLTKCvrupmAiySWsjCKmackWZeQgrKy1X0rkV13
 
-# Initial Root Token: s.STiv0eifCCcX3OoApPvqHJmF
+# Initial Root Token: s.68yvrsufCKn5gO7kIxoJFLl3
