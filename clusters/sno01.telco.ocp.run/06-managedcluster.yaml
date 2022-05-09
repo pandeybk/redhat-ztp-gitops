@@ -18,6 +18,9 @@ metadata:
     # Labels to deploy workload
     app: "webapp"
 
+    # Deploy 5gcores
+    sites: "edgesite"
+
 spec:
   hubAcceptsClient: true
   leaseDurationSeconds: 60
