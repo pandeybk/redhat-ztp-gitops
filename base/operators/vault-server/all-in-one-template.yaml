@@ -621,7 +621,7 @@ spec:
         resources:
           requests:
             storage: 10Gi
-        storageClassName: ocs-storagecluster-cephfs
+        storageClassName: local-storage
 ---
 # Source: vault/templates/injector-mutating-webhook.yaml
 apiVersion: admissionregistration.k8s.io/v1

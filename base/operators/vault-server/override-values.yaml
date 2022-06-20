@@ -16,7 +16,7 @@ injector:
 server:
   dataStorage: 
     enabled: true
-    storageClass: ocs-storagecluster-cephfs
+    storageClass: local-storage
   # auditStorage:
   #   enabled: true
   #   storageClass: local-vs
