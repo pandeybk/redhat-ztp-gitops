@@ -10,23 +10,14 @@ spec:
     resources:
       requests:
         storage: 15Gi
-    storageClassName: ocs-storagecluster-ceph-rbd
+    storageClassName: local-storage
   filesystemStorage:
     accessModes:
     - ReadWriteOnce
     resources:
       requests:
-        storage: 35Gi
-    storageClassName: ocs-storagecluster-ceph-rbd
-#  mustGatherImages:
-#  - name: cnv
-#    openshiftVersion: '4.8'
-#    url: registry.redhat.io/container-native-virtualization/cnv-must-gather-rhel8:v2.6.5
-#  - name: ocs
-#    openshiftVersion: '4.8'
-#    url: registry.redhat.io/ocs4/ocs-must-gather-rhel8
-#  - name: lso
-#    openshiftVersion: '4.8'
+        storage: 15Gi
+    storageClassName: local-storage
   osImages:
   - openshiftVersion: "4.7"
     cpuArchitecture: x86_64

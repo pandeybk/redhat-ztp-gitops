@@ -1,0 +1,13 @@
+---
+kind: LocalVolume
+apiVersion: local.storage.openshift.io/v1
+metadata:
+  name: dev-vdb
+  namespace: openshift-local-storage
+spec:
+  storageClassDevices:
+    - devicePaths:
+        - /dev/vdb
+      fsType: ext4
+      storageClassName: local-storage
+      volumeMode: Filesystem

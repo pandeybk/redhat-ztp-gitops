@@ -25,3 +25,15 @@ virt-install \
 
 
 virsh start ${CLUSTER_NAME}-master-1
+
+
+sudo qemu-img create -f qcow2 /opt/ssd/${CLUSTER_NAME}/disk-hub01.qcow2 50G
+cat <<EOF > /opt/ssd/${CLUSTER_NAME}/disk-hub01.xml
+<disk type='file' device='disk'>
+    <driver name='qemu' type='qcow2'/>
+    <source file='/opt/ssd/${CLUSTER_NAME}/disk-hub01.qcow2'/>
+    <target dev='vdb' bus='virtio'/>
+</disk>
+EOF
+virsh attach-device ${CLUSTER_NAME}-master-1 /opt/ssd/${CLUSTER_NAME}/disk-hub01.xml --persistent
+sudo wipefs -a /dev/vdb
