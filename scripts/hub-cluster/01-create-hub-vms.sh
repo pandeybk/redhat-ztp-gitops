@@ -21,7 +21,7 @@ virt-install \
   --noautoconsole \
   --boot hd,cdrom \
   --import \
-  --disk path=/opt/ssd/${CLUSTER_NAME}/hub01.qcow2,size=20 \
+  --disk path=/opt/ssd/${CLUSTER_NAME}/hub01.qcow2,size=200 \
   --disk /opt/ssd/boot/discovery_image_${CLUSTER_NAME}.iso,device=cdrom \
   --network type=direct,source=${NAME_BRIDGE},mac=00:00:00:00:00:${MAC_ADDRESS_MODIFIER}1,source_mode=bridge,model=virtio
 
@@ -37,7 +37,7 @@ virt-install \
   --noautoconsole \
   --boot hd,cdrom \
   --import \
-  --disk path=//opt/ssd/${CLUSTER_NAME}/hub02.qcow2,size=20 \
+  --disk path=//opt/ssd/${CLUSTER_NAME}/hub02.qcow2,size=200 \
   --disk /opt/ssd/boot/discovery_image_${CLUSTER_NAME}.iso,device=cdrom \
   --network type=direct,source=${NAME_BRIDGE},mac=00:00:00:00:00:${MAC_ADDRESS_MODIFIER}2,source_mode=bridge,model=virtio
 
@@ -53,7 +53,7 @@ virt-install \
   --noautoconsole \
   --boot hd,cdrom \
   --import \
-  --disk path=/opt/ssd/${CLUSTER_NAME}/hub03.qcow2,size=20 \
+  --disk path=/opt/ssd/${CLUSTER_NAME}/hub03.qcow2,size=200 \
   --disk /opt/ssd/boot/discovery_image_${CLUSTER_NAME}.iso,device=cdrom \
   --network type=direct,source=${NAME_BRIDGE},mac=00:00:00:00:00:${MAC_ADDRESS_MODIFIER}3,source_mode=bridge,model=virtio
 

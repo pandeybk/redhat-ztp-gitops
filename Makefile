@@ -6,6 +6,8 @@ pull-vault:
 	helm pull hashicorp/vault  --untar --untardir=base/operators/vault-server
 	mv base/operators/vault-server/vault base/operators/vault-server/chart
 	helm template vault-server  base/operators/vault-server/chart -f base/operators/vault-server/override-values.yaml  --namespace vault > base/operators/vault-server/all-in-one-template.yaml
+	# helm template vault-server  base/operators/vault-server/chart -f base/operators/vault-server/override-ha-values.yaml  --namespace vault > base/operators/vault-server/all-in-one-template.yaml
+
 
 pull-external-secrets:
 	rm -rf base/operators/external-secrets/chart
