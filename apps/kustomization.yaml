@@ -2,5 +2,5 @@ resources:
 - clusters
 - operators
 - operator-configs
-- governance
-- workload
+# - governance
+# - workload
