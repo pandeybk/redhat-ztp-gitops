@@ -11,7 +11,7 @@ sudo qemu-img create -f qcow2 /opt/ssd/${CLUSTER_NAME}/hub03.qcow2 200G
 
 virt-install \
   --name=${CLUSTER_NAME}-master-1 \
-  --ram=40960 \
+  --ram=51200 \
   --vcpus=16 \
   --cpu host-passthrough \
   --os-type linux \
@@ -27,7 +27,7 @@ virt-install \
 
 virt-install \
   --name=${CLUSTER_NAME}-master-2 \
-  --ram=40960 \
+  --ram=51200 \
   --vcpus=16 \
   --cpu host-passthrough \
   --os-type linux \
@@ -43,7 +43,7 @@ virt-install \
 
 virt-install \
   --name=${CLUSTER_NAME}-master-3 \
-  --ram=40960 \
+  --ram=51200 \
   --vcpus=16 \
   --cpu host-passthrough \
   --os-type linux \
