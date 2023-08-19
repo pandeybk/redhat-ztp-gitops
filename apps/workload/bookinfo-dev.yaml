@@ -29,7 +29,7 @@ spec:
         syncOptions:
             - CreateNamespace=true
 ---
-apiVersion: cluster.open-cluster-management.io/v1alpha1
+apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
   name: bookinfo-placement
@@ -38,5 +38,8 @@ spec:
   predicates:
   - requiredClusterSelector:
       labelSelector:
-        matchLabels:
-          app: webapp
+        matchExpressions:
+        - key: app
+          operator: In
+          values:
+          - webapp
